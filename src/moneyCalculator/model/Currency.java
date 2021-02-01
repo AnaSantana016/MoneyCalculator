@@ -1,17 +1,12 @@
 package moneyCalculator.model;
 
-public enum Currency {
+public class Currency {
 
-    EUR("EUR","euros","€"),
-    GBP("GBP","libras","£"),
-    USD("USD","dolares","$");
-    
-    //atributos de la divisa
-    private String currencyName;
-    private String symbol;
-    private String ISOCode;
+    private final String currencyName;
+    private final String symbol;
+    private final String ISOCode;
 
-    private Currency(String currencyName, String symbol, String ISOCode) {
+    public Currency(String currencyName, String symbol, String ISOCode) {
         this.currencyName = currencyName;
         this.symbol = symbol;
         this.ISOCode = ISOCode;
@@ -28,4 +23,11 @@ public enum Currency {
     public String getISOCode() {
         return ISOCode;
     }
+
+    @Override
+    public String toString() {
+        return ISOCode;
+    }
+    
+    
 }
