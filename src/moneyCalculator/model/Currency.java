@@ -1,13 +1,17 @@
-package exchangecurrency;
+package moneyCalculator.model;
 
-public class Currency {
+public enum Currency {
 
+    EUR("EUR","euros","€"),
+    GBP("GBP","libras","£"),
+    USD("USD","dolares","$");
+    
     //atributos de la divisa
     private String currencyName;
     private String symbol;
     private String ISOCode;
 
-    public Currency(String currencyName, String symbol, String ISOCode) {
+    private Currency(String currencyName, String symbol, String ISOCode) {
         this.currencyName = currencyName;
         this.symbol = symbol;
         this.ISOCode = ISOCode;
